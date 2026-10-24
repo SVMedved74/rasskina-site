@@ -1,0 +1,50 @@
+/* Любовь Расскина, тренер по голосу — правки поверх темы «эксперт».
+   Акцент — сливовый «цвет сцены». Контраст: белый на акценте 9.6, акцент на фоне 8.9. */
+:root {
+  --bg: #F8F5F2;
+  --bg-alt: #EFE8E6;
+  --accent: #7A2E4A;
+  --accent-soft: #EBD6DD;
+  --line: #E0D6D4;
+  --dark: #2A1B23;
+  --on-dark: #F1E9EC;
+  --accent-on-dark: #F0AFC4;
+}
+
+.hero__img.ph { aspect-ratio: 4 / 5; border-radius: var(--radius-img); }
+
+/* Оффер на первом экране */
+.offer { display: inline-flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; margin: 0 0 24px; padding: 12px 16px; border-radius: var(--radius); background: var(--accent-soft); font-weight: 600; }
+.offer s { color: var(--text-muted); font-weight: 400; }
+.offer b { color: var(--accent); font-size: 1.2rem; }
+
+/* Квиз */
+.quiz { background: var(--surface); border-radius: var(--radius-card); padding: 28px; box-shadow: var(--shadow); max-width: 640px; }
+.quiz__progress { font-size: .85rem; color: var(--text-muted); margin-bottom: 12px; }
+.quiz__step { display: none; }
+.quiz__step.is-active { display: block; }
+.quiz__options { display: grid; gap: 10px; margin-top: 16px; }
+.quiz__options button { text-align: left; font: 500 1rem/1.4 var(--font-body); color: var(--text); padding: 14px 16px; border-radius: var(--radius); border: 1.5px solid var(--line); background: var(--bg); cursor: pointer; }
+.quiz__options button:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Тарифы */
+.plan { display: flex; flex-direction: column; }
+.plan .price__cost { font-size: 1.6rem; margin: 8px 0 4px; }
+.plan ul { padding-left: 1.1em; margin: 12px 0 24px; color: var(--text-muted); }
+.plan .btn { margin-top: auto; }
+.plan--main { outline: 2px solid var(--accent); }
+.tag { display: inline-block; font-size: .78rem; font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; }
+
+/* Аудио до/после */
+.story .card__img { margin-bottom: 14px; }
+.story__audio { display: grid; gap: 8px; margin-top: 12px; font-size: .9rem; }
+.story__audio .ph { border-radius: 10px; padding: 10px; justify-items: start; }
+
+/* Плашки «бонусы» */
+.perks { display: grid; gap: 12px; list-style: none; padding: 0; margin: 0; }
+.perks li { padding: 16px 18px; border-radius: var(--radius-card); background: var(--surface); border: 1px solid var(--line); }
+.perks b { display: block; }
+@media (min-width: 720px) { .perks { grid-template-columns: repeat(2, 1fr); } }
+
+body { padding-bottom: 80px; }
+@media (min-width: 900px) { body { padding-bottom: 0; } }
